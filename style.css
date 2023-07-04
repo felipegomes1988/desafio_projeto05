@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  --ff-heading: 'Staatliches', cursive;
+  --ff-texting: 'Palanquin', sans-serif; 
+
+  font-size: 62.5%;
+  --fs-body: 2rem;
+  --fs-heading: 4rem;
+}
+
+/*body::before{
+  content: '';
+
+  width: 100vw;
+  height: 28rem;
+
+  background: #8E9AAF;
+
+  position: absolute;
+  z-index: -1;
+
+}
+*/
+
+body {
+  background: #EFF1FF;
+  /*position: relative;*/
+}
+
+.page {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+header {
+
+  min-width: 100%;
+  background: #8E9AAF;
+
+  display: block;
+  text-align: center;
+
+  padding-top: 3.2rem;
+  padding-bottom: 2.9rem;
+}
+
+header img {
+  height: 13.7rem;
+  width: auto;
+  margin-bottom: 3.2rem;
+}
+
+header h1 {
+
+  height: 5rem;
+  padding-top: 8px;
+
+  font-family:var(--ff-heading);
+  color: #FFF;
+
+  text-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 2px;
+
+  background: #CBC0D3;
+}
+
+main {
+  margin-top: 1.4rem;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center ;
+}
+
+section {
+  display: grid;
+  gap: 3.2rem;
+
+}
+
+p {
+
+  padding: 0;
+  max-width: 30rem;
+  color: #23053A;
+  text-align: center;
+  font-size: 20px;
+  font-family: Palanquin;
+  font-weight: 400;
+  line-height: 15px;
+
+  margin-bottom: 6.3rem;
+}
+
+.card {
+  max-width: 32rem;
+  position: relative;
+}
+
+.card h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  width: fit-content;
+  background-color: #FEEAFA;
+  border-radius: 2rem;
+
+  color: #4A4E69;
+  font-size: 20px;
+  font-family: var(--ff-heading);
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: 1px;
+
+  padding: 0 2.3rem;
+
+  animation: topdown 400ms 600ms backwards;
+  animation-timing-function: ease-in
+  
+}
+
+
+.card img {
+
+  animation: downtop 600ms 300ms backwards;
+  animation-timing-function: ease-in;
+
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 2rem;
+  
+
+  transition: all 0.2s;
+  
+}
+
+.card img:hover {
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+@keyframes downtop {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
